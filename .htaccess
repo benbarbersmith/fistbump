@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule ^app.css$ app.css [L]
+RewriteRule ^app.js$ app.js [L]
+RewriteRule ^left.png$ left.png [L]
+RewriteRule ^right.png$ right.png [L]
+RewriteRule ^.*$ index.html [L]
