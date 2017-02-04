@@ -1980,7 +1980,6 @@ function draw(fromHistory) {
   Object.keys(tattoo).map(function(key) { drawLetter(key, tattoo[key]) });
   var tattooString = stringify(tattoo);
   var tattooUrl = urlify(tattoo);
-  document.getElementById("permalink").href = tattooUrl;
   if(typeof fromHistory === 'undefined' || !fromHistory) {
     history.pushState(tattoo, "#fistbump: " + tattooString, tattooUrl);
   }
