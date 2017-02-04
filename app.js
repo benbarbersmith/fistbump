@@ -1986,7 +1986,7 @@ function draw(fromHistory) {
 }
 
 function initialize() {
-  var page = spliddit(decodeURIComponent(location.pathname.split('/')[location.pathname.split('/').length - 1]));
+  var page = decodeURIComponent(location.pathname.split('/')[location.pathname.split('/').length - 1]).split('');
   if(page.length === 8) {
     tattoo.left = page.slice(0,4);
     tattoo.right = page.slice(4);
