@@ -1955,12 +1955,12 @@ var words = [
 ];
 
 var tattoo = {
-  left: 'fist',
-  right: 'bump'
+  left: ['f', 'i', 's', 't'],
+  right: ['b', 'u', 'm', 'p'],
 };
 
 function stringify(tattoo) {
-  return tattoo.left + tattoo.right;
+  return tattoo.left.join('') + tattoo.right.join('');
 }
 
 function urlify(tattoo) {
@@ -1971,7 +1971,7 @@ function urlify(tattoo) {
 }
 
 function drawLetter(side, word) {
-  word.split('').map(function(letter, index) {
+  word.map(function(letter, index) {
     document.getElementById(side + (index + 1)).innerHTML = letter;
   });
 }
@@ -1986,22 +1986,26 @@ function draw(fromHistory) {
 }
 
 function initialize() {
-  var page = decodeURIComponent(location.pathname.split('/')[location.pathname.split('/').length - 1]);
+  var page = spliddit(decodeURIComponent(location.pathname.split('/')[location.pathname.split('/').length - 1]));
   if(page.length === 8) {
-    tattoo.left = page.substring(0,4);
-    tattoo.right = page.substring(4);
+    tattoo.left = page.slice(0,4);
+    tattoo.right = page.slice(4);
   } else if(page.length === 9 && page[4] === "+") {
-    tattoo.left = page.substring(0,4);
-    tattoo.right = page.substring(5);
+    tattoo.left = page.slice(0,4);
+    tattoo.right = page.slice(5);
   } else {
     randomize();
   }
   draw();
 }
 
+function getRandomWord() {
+  return words[Math.floor((Math.random() * words.length))].split('');
+}
+
 function randomize() {
-  tattoo.left = words[Math.floor((Math.random() * words.length))];
-  tattoo.right = words[Math.floor((Math.random() * words.length))];
+  tattoo.left = getRandomWord();
+  tattoo.right = getRandomWord();
 }
 
 window.onload = initialize;
