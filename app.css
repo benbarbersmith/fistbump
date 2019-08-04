@@ -20,7 +20,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -88,62 +87,61 @@ h2 {
 
 span.letter {
   text-transform: uppercase;
-  display: inline-block;
   position: relative;
   float: left;
   font-family: 'Overpass Mono', sans-serif;
 }
 
-span.letter#left1 {
+span.letter#finger0 {
   margin-top: 2vh;
   margin-left: 3.5vw;
   transform: rotate(-9deg);
   font-size: 9vw;
 }
 
-span.letter#left2 {
+span.letter#finger1 {
   margin-top: 0vh;
   margin-left: 2.2vw;
   transform: rotate(-3deg);
   font-size: 10vw;
 }
 
-span.letter#left3 {
+span.letter#finger2 {
   margin-top: -1vh;
   margin-left: 3.5vw;
   transform: rotate(-1deg);
   font-size: 11vw;
 }
 
-span.letter#left4 {
+span.letter#finger3 {
   margin-top: -1vh;
   margin-left: 4.5vw;
   transform: rotate(3deg);
   font-size: 11vw;
 }
 
-span.letter#right1 {
+span.letter#finger4 {
   margin-top: -1vh;
   margin-left: 11.5vw;
   transform: rotate(-1deg);
   font-size: 11vw;
 }
 
-span.letter#right2 {
+span.letter#finger5 {
   margin-top: -0.5vh;
   margin-left: 4vw;
   transform: rotate(1deg);
   font-size: 11vw;
 }
 
-span.letter#right3 {
+span.letter#finger6 {
   margin-top: 0.5vh;
   margin-left: 3.5vw;
   transform: rotate(3deg);
   font-size: 10vw;
 }
 
-span.letter#right4 {
+span.letter#finger7 {
   margin-top: 2vh;
   margin-left: 2.2vw;
   transform: rotate(9deg);
@@ -173,7 +171,8 @@ a {
   color: rgb(255, 82, 82);
 }
 
-a.button {
+button {
+  font-family: 'Amatic SC', cursive;
   margin-bottom: 2vh;
   padding: 0.25em 0.25em 0.25em 0.25em;
   border-radius: 0.25em;
